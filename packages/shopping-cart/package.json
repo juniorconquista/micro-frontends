@@ -1,0 +1,26 @@
+{
+  "name": "shopping-cart",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Júnior Conquista <conquista.engcomp@gmail.com>",
+  "homepage": "https://github.com/juniorconquista/micro-frontends#readme",
+  "license": "MIT",
+  "main": "lib/shopping-cart.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juniorconquista/micro-frontends.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/juniorconquista/micro-frontends/issues"
+  }
+}
