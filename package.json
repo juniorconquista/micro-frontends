@@ -1,0 +1,15 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "prepare-husky": "husky install",
+    "pre-commit": "lint-staged",
+    "chek": "npm-check -u -s"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "husky": "^7.0.1",
+    "lerna": "^4.0.0"
+  }
+}
