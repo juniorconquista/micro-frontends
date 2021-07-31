@@ -13,7 +13,7 @@ jobs:
           node-version: 14
       - run: cd packages/container
       - run: npm install
-      - run: npm run eslint
+      - run: npm run eslint:ci
   test:
     runs-on: ubuntu-latest
     steps:
