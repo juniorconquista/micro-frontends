@@ -6,16 +6,21 @@ on: [push, pull_request]
 jobs:
   lint:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./packages/container
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: cd packages/container
       - run: npm install
       - run: npm run eslint:ci
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./packages/container
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
