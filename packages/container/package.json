@@ -18,6 +18,7 @@
     "test:ci": "npm test -- --coverage",
     "pre-commit": "lint-staged",
     "pre-push": "npm run test:ci",
+    "eslint": "eslint src --ext .ts,.tsx",
     "chek": "npm-check -u -s"
   },
   "bugs": {
