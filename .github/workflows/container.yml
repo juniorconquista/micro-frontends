@@ -1,5 +1,5 @@
 
-name: react tags input
+name: Container
 
 on: [push, pull_request]
 
