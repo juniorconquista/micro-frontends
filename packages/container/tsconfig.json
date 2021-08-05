@@ -19,7 +19,8 @@
     "resolveJsonModule": true
   },
   "include": [
-    "src"
+    "src",
+    "src/main/config/custom.d.ts"
   ],
   "exclude": [
     "src/main/test/cypress"
