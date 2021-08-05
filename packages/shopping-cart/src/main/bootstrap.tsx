@@ -2,8 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from '../App'
 
-console.log('teste')
-
 // Mount function to start up the app
 const mount = (el: Element): void => {
   ReactDOM.render(<App />, el)
