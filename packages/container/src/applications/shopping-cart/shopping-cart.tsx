@@ -1,13 +1,13 @@
 
-import React, { useRef } from 'react'
-// import { mount } from 'auth/AuthApp';
+import React, { useRef, useEffect } from 'react'
+import { mount } from 'shoppingCart/ShoppingCartApp'
 
 const ShoppingCart: React.FC = () => {
   const ref: React.MutableRefObject<HTMLDivElement> = useRef(null)
 
-  // useEffect(() => {
-  //   mount(ref.current);
-  // }, []);
+  useEffect(() => {
+    mount(ref.current)
+  }, [])
 
   return <div ref={ref} />
 }

@@ -2,8 +2,8 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-// const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
-// const packageJson = require('../package.json');
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
+const package = require('../package.json');
 
 module.exports = {
     resolve: {
@@ -28,15 +28,14 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        // new ModuleFederationPlugin({
-        //     name: 'container',
-        //     remotes: {
-        //         auth: `auth@http://${process.env.FRONTEND_APIGATEWAY}/authentication/remoteEntry.js`,
-        //         menu: `menu@http://${process.env.FRONTEND_APIGATEWAY}/menu/remoteEntry.js`,
-        //         schedule: `schedule@http://0.0.0.0:9104/remoteEntry.js`
-        //     },
-        //     shared: packageJson.dependencies,
-        // }),
+        new ModuleFederationPlugin({
+            name: 'container',
+            remotes: {
+                store: `store@http://0.0.0.0:3003/remoteEntry.js`,
+                shoppingCart: `shoppingCart@http://0.0.0.0:3002/remoteEntry.js`,
+            },
+            shared: package.dependencies,
+        }),
         new HtmlWebpackPlugin({
             template: './public/index.html'
         }),
