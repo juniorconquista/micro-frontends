@@ -2,5 +2,7 @@
 . "$(dirname "$0")/_/husky.sh"
 
 cd packages/container && yarn pre-commit 
-cd ../../
-cd packages/shopping-cart && yarn pre-commit
+cd ../
+cd shopping-cart && yarn pre-commit
+cd ../
+cd store && yarn pre-commit
