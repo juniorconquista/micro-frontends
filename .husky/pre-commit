@@ -6,3 +6,5 @@ cd ../
 cd shopping-cart && yarn pre-commit
 cd ../
 cd store && yarn pre-commit
+cd ../
+cd auth && yarn pre-commit
