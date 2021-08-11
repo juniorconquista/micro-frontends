@@ -6,7 +6,12 @@ const ShoppingCartLazy = lazy(async () => import('./applications/shopping-cart/s
 const App: React.FC = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <div style={{ display: 'flex' }}>
+      <div style={{
+        display: 'flex',
+        height: '100vh',
+        justifyContent: 'space-around',
+        alignItems: 'center'
+      }}>
         <StoreLazy />
         <ShoppingCartLazy />
       </div>
