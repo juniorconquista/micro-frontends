@@ -21,7 +21,7 @@ module.exports = merge(common, {
       name: 'auth',
       filename: 'remoteEntry.js',
       exposes: {
-        './authApp': './src/main/bootstrap',
+        './AuthApp': './src/main/bootstrap',
       },
       shared: package.dependencies,
     }),

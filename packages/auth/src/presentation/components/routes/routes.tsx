@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { Login } from '@/presentation/pages'
 
 const Router: React.FC = () => (
@@ -8,6 +8,7 @@ const Router: React.FC = () => (
       <Route path="/login" exact>
         <Login />
       </Route>
+      <Redirect to="/login" />
     </Switch>
   </BrowserRouter>
 )
