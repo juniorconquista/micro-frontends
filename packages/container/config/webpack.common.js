@@ -31,8 +31,9 @@ module.exports = {
         new ModuleFederationPlugin({
             name: 'container',
             remotes: {
-                store: `store@http://0.0.0.0:3003/remoteEntry.js`,
-                shoppingCart: `shoppingCart@http://0.0.0.0:3002/remoteEntry.js`,
+                shoppingCart: 'shoppingCart@http://0.0.0.0:3002/remoteEntry.js',
+                store: 'store@http://0.0.0.0:3003/remoteEntry.js',
+                auth: 'auth@http://0.0.0.0:3004/remoteEntry.js'
             },
             shared: package.dependencies,
         }),
