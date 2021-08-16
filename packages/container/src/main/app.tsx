@@ -1,21 +1,19 @@
-import React, { Suspense, useCallback, useState } from 'react'
-import { useHistory, BrowserRouter } from 'react-router-dom'
+import React, { Suspense } from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { useAtom } from 'jotai'
 import { PrivateRoutes, PublicRoutes } from '@/presentation/components'
+import { authAtom } from '@/atoms'
+import { useStorageObservable } from '@/hooks'
 
 const App: React.FC = () => {
-  const accessToken = !!sessionStorage.getItem('SessionKey')
-  const history = useHistory()
-  const [isSignedIn, setIsSignedIn] = useState(accessToken)
-
-  const onSignIn = useCallback(() => {
-    setIsSignedIn(true)
-    history.push('/')
-  }, [isSignedIn])
+  const [auth] = useAtom(authAtom)
+  console.log('auth', auth)
+  useStorageObservable()
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <BrowserRouter>
-        {isSignedIn ? <PrivateRoutes /> : <PublicRoutes onSignIn={onSignIn} />}
+        {auth ? <PrivateRoutes /> : <PublicRoutes />}
       </BrowserRouter>
     </Suspense>
   )

@@ -6,7 +6,7 @@ const ShoppingCartLazy = lazy(async () => import('../../applications/shopping-ca
 
 const PrivateRoutes: React.FC = () => (
     <Switch>
-        <Route exact path="/store">
+        <Route exact path="/">
             <StoreLazy />
         </Route>
         <Route exact path="/shopping-cart">
